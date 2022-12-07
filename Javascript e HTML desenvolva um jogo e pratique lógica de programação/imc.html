@@ -1,0 +1,17 @@
+<meta charset="UTF-8" />
+
+<script>
+  function breakLine() {
+    document.write("<br>");
+  }
+
+  function displayTextWithBreakLine(phrase) {
+    document.write(phrase);
+    breakLine();
+  }
+
+  function calculateImc(weight, height) {
+    return Math.round(weight / Math.pow(height, 2));
+  }
+  displayTextWithBreakLine("O seu IMC é: " + calculateImc(prompt("Informe o seu peso:"), prompt("Informe sua altura: ")));
+</script>
