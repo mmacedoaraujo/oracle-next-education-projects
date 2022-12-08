@@ -1,0 +1,29 @@
+<meta charset="UTF-8" />
+
+<script>
+  function breakLine() {
+    document.write("<br>");
+  }
+
+  function displayTextWithBreakLine(phrase) {
+    document.write("<big>" + phrase + "</big>");
+    breakLine();
+  }
+
+  function chooseHowManyNumbers(n) {
+    return Math.round(Math.random() * n);
+  }
+
+  var number = chooseHowManyNumbers(
+    parseInt(
+      prompt("Insira até quantos números você deseja inserir no desafio")
+    )
+  );
+  var guess = parseInt(prompt("Digite seu chute!"));
+
+  if (guess == number) {
+    displayTextWithBreakLine("Você acertou!");
+  } else {
+    displayTextWithBreakLine("Você errou, o número pensado foi: " + number);
+  }
+</script>

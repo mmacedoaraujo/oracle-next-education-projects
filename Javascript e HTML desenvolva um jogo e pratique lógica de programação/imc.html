@@ -6,12 +6,26 @@
   }
 
   function displayTextWithBreakLine(phrase) {
-    document.write(phrase);
+    document.write("<big>" + phrase + "</big>");
     breakLine();
   }
 
   function calculateImc(weight, height) {
     return Math.round(weight / Math.pow(height, 2));
   }
-  displayTextWithBreakLine("O seu IMC é: " + calculateImc(prompt("Informe o seu peso:"), prompt("Informe sua altura: ")));
+  var imc = calculateImc(
+    prompt("Informe o seu peso:"),
+    prompt("Informe sua altura: ")
+  );
+  if (imc >= 18.5 && imc <= 35) {
+    displayTextWithBreakLine("Seu IMC é " + imc + " e você está na média.");
+  } else if (imc < 18.5) {
+    displayTextWithBreakLine(
+      "Seu IMC é " + imc + " e você está abaixo da média."
+    );
+  } else if (imc > 35) {
+    displayTextWithBreakLine(
+      "Seu IMC é " + imc + " e você está acima da média."
+    );
+  }
 </script>
