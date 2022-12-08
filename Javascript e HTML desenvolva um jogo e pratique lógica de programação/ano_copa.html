@@ -1,0 +1,18 @@
+<meta charset="UTF-8" />
+<script>
+  function breakLine() {
+    document.write("<br>");
+  }
+
+  function displayTextWithBreakLine(phrase) {
+    document.write("<big>" + phrase + "</big>");
+    breakLine();
+  }
+
+  var worldCupYear = 1930;
+
+  while (worldCupYear <= 2022) {
+    displayTextWithBreakLine("Houve copa em: " + worldCupYear);
+    worldCupYear += 4;
+  }
+</script>

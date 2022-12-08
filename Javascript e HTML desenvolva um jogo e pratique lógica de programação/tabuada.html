@@ -1,0 +1,24 @@
+<meta charset="UTF-8" />
+<script>
+  function breakLine() {
+    document.write("<br>");
+  }
+
+  function displayTextWithBreakLine(phrase) {
+    document.write("<big>" + phrase + "</big>");
+    breakLine();
+  }
+  var numberFromUser = parseInt(
+    prompt("Insira o número que deseja saber a tabuada")
+  );
+
+  for (let index = 1; index <= 10; index++) {
+    displayTextWithBreakLine(
+      numberFromUser +
+        " vezes " +
+        index +
+        " é igual à: " +
+        numberFromUser * index
+    );
+  }
+</script>

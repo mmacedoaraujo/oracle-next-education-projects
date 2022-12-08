@@ -1,0 +1,20 @@
+<meta charset="UTF-8" />
+<script>
+  function breakLine() {
+    document.write("<br>");
+  }
+
+  function displayTextWithBreakLine(phrase) {
+    document.write("<big>" + phrase + "</big>");
+    breakLine();
+  }
+
+  var numberOfParents = parseInt(prompt("Insira a quantidade de familiares"));
+  var totalAgeOfParents = 0;
+  for (let i = 1; i <= numberOfParents; i++) {
+    totalAgeOfParents += parseInt(prompt("Idade da " + i + "º pessoa: "));
+  }
+  displayTextWithBreakLine(
+    "A média das idades é igual à: " + totalAgeOfParents / numberOfParents
+  );
+</script>

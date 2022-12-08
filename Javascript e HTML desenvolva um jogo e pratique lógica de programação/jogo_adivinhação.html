@@ -19,11 +19,17 @@
       prompt("Insira até quantos números você deseja inserir no desafio")
     )
   );
-  var guess = parseInt(prompt("Digite seu chute!"));
+  var tries = 0;
+  while (tries < 3) {
+    
+    var guess = parseInt(prompt("Digite seu chute!"));
 
-  if (guess == number) {
-    displayTextWithBreakLine("Você acertou!");
-  } else {
-    displayTextWithBreakLine("Você errou, o número pensado foi: " + number);
+    if (guess == number) {
+      displayTextWithBreakLine("Você acertou!");
+      break;
+    } else {
+      displayTextWithBreakLine("Você errou");
+      tries++;
+    }
   }
 </script>
