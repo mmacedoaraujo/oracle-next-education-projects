@@ -1,19 +1,55 @@
 <meta charset="UTF-8" />
-<input type="text" />
+<input type="text" placeholder="seu palpite" id="guess" />
 <button>Compare com o meu segredo</button>
 <script>
-  var input = document.querySelector("input");
-  input.focus();
-
   function verifyGuess() {
-    if (input.value == Math.round(Math.random * 1)) {
-      alert("Você acertou!");
-    } else {
+    var itGuessedRight = false;
+    for (let index = 0; index < secrets.length; index++) {
+      if (input.value == secrets[index]) {
+        alert("Você acertou!");
+        itGuessedRight = true;
+        break;
+      }
+    }
+    if (itGuessedRight == false) {
       alert("Você errou...");
     }
     input.value = "";
     input.focus();
   }
+
+  function generateRandonNumber() {
+    return Math.round(Math.random() * 10);
+  }
+
+  function sortNumbers(quantity) {
+    var secrets = [];
+    var number = 1;
+
+    while (number <= quantity) {
+      var randomNumber = generateRandonNumber();
+      if (generateRandonNumber() != 0) {
+        var hasFound = false;
+        for (let index = 0; index < quantity; index++) {
+          if (secrets[index] == randomNumber) {
+            hasFound = true;
+            break;
+          }
+        }
+        if (hasFound == false) {
+          secrets.push(randomNumber);
+          number++;
+        }
+      }
+    }
+
+    return secrets;
+  }
+  var secrets = sortNumbers(
+    parseInt(prompt("Quantos números devem ser gerados?"))
+  );
+  var input = document.getElementById("guess");
+  input.focus();
 
   var button = document.querySelector("button");
   button.onclick = verifyGuess;
