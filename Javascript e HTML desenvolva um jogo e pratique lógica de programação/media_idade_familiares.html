@@ -11,10 +11,13 @@
 
   var numberOfParents = parseInt(prompt("Insira a quantidade de familiares"));
   var totalAgeOfParents = 0;
+
   for (let i = 1; i <= numberOfParents; i++) {
     totalAgeOfParents += parseInt(prompt("Idade da " + i + "º pessoa: "));
   }
+
   displayTextWithBreakLine(
-    "A média das idades é igual à: " + totalAgeOfParents / numberOfParents
+    "A média das idades é igual à: " +
+      Math.round(totalAgeOfParents / numberOfParents)
   );
 </script>
