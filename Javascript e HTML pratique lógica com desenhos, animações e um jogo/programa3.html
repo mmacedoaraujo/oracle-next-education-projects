@@ -1,0 +1,47 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+    var screen = document.querySelector("canvas");
+    var brush = screen.getContext("2d");
+    var colors = ["red", "green", "blue"];
+    var index = 0;
+    var radius = 10;
+    brush.fillStyle = "grey";
+    brush.fillRect(0, 0, 600, 400);
+    var draw = false;
+
+    screen.onmousemove = function (event) {
+        if (draw) {
+            var x = event.pageX - screen.offsetLeft;
+            var y = event.pageY - screen.offsetTop;
+            brush.fillStyle = colors[index];
+            brush.beginPath();
+            if (event.shiftKey && radius <= 50) {
+                radius = radius + 10;
+            } else if (event.altKey && radius >= 20) {
+                radius = radius - 10;
+            }
+            brush.arc(x, y, radius, 0, 2 * Math.PI);
+            brush.fill();
+        }
+    }
+
+    screen.oncontextmenu = function () {
+        index++
+        brush.fillStyle = colors[index];
+        if (index >= colors.length) {
+            index = 0;
+        }
+        return false;
+    }
+
+    screen.onmousedown = function () {
+        draw = true;
+    }
+
+    screen.onmouseup = function () {
+        draw = false;
+    }
+
+    screen.oncontextmenu = changeColor;
+</script>
