@@ -5,7 +5,10 @@
     var brush = screen.getContext("2d");
     brush.fillStyle = "lightgray";
     brush.fillRect(0, 0, 600, 400);
+
     var radius = 10;
+    var randomX = 0;
+    var randomY = 0;
 
     function drawCircle(x, y, radius, color) {
 
@@ -29,10 +32,29 @@
     function generateRandomPosition(max) {
         return Math.floor(Math.random() * max);
     }
+
     function refreshScreen() {
         clearScreen();
-        target(generateRandomPosition(600), generateRandomPosition(400));
+        randomX = generateRandomPosition(600);
+        randomY = generateRandomPosition(400);
+        target(randomX, randomY);
     }
+
+    function shoot(event) {
+        var x = event.pageX - screen.offsetLeft;
+        var y = event.pageY - screen.offsetTop;
+
+        if((x > randomX - radius)
+    && (x < randomX + radius)
+    && (y > randomY - radius)
+    && (y < randomY + radius)) {
+
+        alert('Acertou!');
+
+    }
+    }
+
+    screen.onclick = shoot;
 
     setInterval(refreshScreen, 1500);
 </script>
