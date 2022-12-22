@@ -1,14 +1,17 @@
 body {
-  background: #cccccc;
 }
 
 #banner {
-  width: 70%;  
+  width: 100%;
+}
+
+.main {
+  background: #cccccc;
+  padding: 30px;
 }
 
 h1 {
   text-align: center;
-
 }
 
 p {
@@ -21,4 +24,28 @@ p {
 
 em strong {
   color: red;
+}
+
+.items {
+  font-style: italic;
+}
+
+.benefits {
+  background: white;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+}
+
+ul {
+  display: inline-block;
+  vertical-align: top;
+  width: 20%;
+  margin-right: 20%;
+}
+
+.benefits-img {
+  width: 50%;
 }
