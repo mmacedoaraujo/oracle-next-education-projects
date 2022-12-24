@@ -1,7 +1,13 @@
+
 header {
     background-color: #bbbbbb;
-    display: -webkit-inline-flex;
     width: 100%;
+}
+
+header ul {
+    position: absolute;
+    top: 70px;
+    right: 30px;
 }
 
 nav li {
