@@ -2,12 +2,19 @@
 header {
     background-color: #bbbbbb;
     width: 100%;
+    padding: 20px 0 20px 0;
 }
 
-header ul {
+.box {
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
+}
+
+nav {
     position: absolute;
-    top: 70px;
-    right: 30px;
+    top: 110px;
+    right: 0;
 }
 
 nav li {
