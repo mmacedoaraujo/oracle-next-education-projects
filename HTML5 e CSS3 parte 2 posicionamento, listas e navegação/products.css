@@ -54,16 +54,16 @@ nav a:hover {
 }
 
 .products li:hover {
-    border-color: #c78c19;
+  border-color: #c78c19;
 }
 
 .products li:active {
-    border-color: #088c19;
+  border-color: #088c19;
 }
 
-.products li:hover h2{
-    border-color: #c78c19;
-    font-size: 34px;
+.products li:hover h2 {
+  border-color: #c78c19;
+  font-size: 34px;
 }
 
 .products h2 {
@@ -72,11 +72,23 @@ nav a:hover {
 }
 
 .product-description {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .product-price {
   font-size: 22px;
   font-weight: bold;
+  margin: 20px 0;
+}
+
+footer {
+  text-align: center;
+  background: url(assets/bg.jpg);
+  padding: 40px 0;
+}
+
+.copyright {
+  color: white;
+  font-size: 13px;
   margin: 20px 0;
 }
