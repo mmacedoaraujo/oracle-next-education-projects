@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style-contact.css">
+    <link rel="stylesheet" href="contact-style.css">
     <title>Produtos - Barbearia Alura</title>
 </head>
 
@@ -27,13 +27,41 @@
     <main>
         <form>
             <label for="name">Nome e Sobrenome</label>
-            <input type="text" id="name">
+            <input type="text" id="name" class="standard-input">
 
             <label for="email">Email</label>
-            <input type="text" id="email">
+            <input type="text" id="email" class="standard-input">
 
             <label for="number">Telefone</label>
-            <input type="text" id="number">
+            <input type="text" id="number" class="standard-input">
+
+            <label for="message">Mensagem</label>
+            <textarea cols="70" rows="10" id="message"></textarea>
+
+            <div>
+                <p>Como prefere o nosso contato?</p>
+                <label for="radio-email"><input type="radio" name="contact" value="email" id="radio-email">Email</label>
+
+
+                <label for="radio-number"> <input type="radio" name="contact" value="number"
+                        id="radio-number">Telefone</label>
+
+
+                <label for="radio-whatsapp"><input type="radio" name="contact" value="Whatsapp"
+                        id="radio-whatsapp">Whatsapp</label>
+
+            </div>
+            <div>
+                <p>Qual horário prefere ser atendido?</p>
+                <select>
+                    <option>Manhã</option>
+                    <option>Tarde</option>
+                    <option>Noite</option>
+                </select>
+            </div>
+
+            <label class="checkbox" for=""><input type="checkbox">Gostaria de receber nossas novidades por
+                email?</label>
 
             <input type="submit">
         </form>
