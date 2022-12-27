@@ -36,7 +36,9 @@ nav a:hover {
 
 main {
   position: relative;
-  width: 940px;
+  display: flex;
+  justify-content: center;
+  width: 1440px;
   margin: 0 auto;
 }
 
@@ -63,9 +65,28 @@ form textarea {
   margin: 20px 0;
 }
 
+.send-button {
+  width: 40%;
+  padding: 15px 0;
+  background: orange;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  transition: 1s all;
+  cursor: pointer;
+}
+
+.send-button:hover {
+  background: darkorange;
+  transform: rotate(1deg) scale(1.1);
+}
+
 footer {
   text-align: center;
   background: url(assets/bg.jpg);
+  width: 100%;
   padding: 40px 0;
 }
 
