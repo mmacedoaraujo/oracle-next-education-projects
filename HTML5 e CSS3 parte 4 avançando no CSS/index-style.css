@@ -49,7 +49,7 @@ nav a:hover {
   width: 1024px;
   margin: 0 auto;
   padding: 3em 0;
-  background-color: #fefefefe;
+  background-color: rgba(254, 254, 254, 0.996);
 }
 
 .main-title {
@@ -57,6 +57,8 @@ nav a:hover {
   font-size: 2em;
   margin: 0 0 1em;
   clear: left;
+  color: rgba(0, 0, 0, 0.6);
+  text-shadow: 10px 5px 10px rgba(41, 37, 37, 0.296);
 }
 
 .main-section p {
@@ -73,7 +75,7 @@ nav a:hover {
 
 .map {
   padding: 3em 0;
-  background: linear-gradient(#FEFEFE, #888888);
+  background: linear-gradient(#fefefe, #888888);
 }
 
 .map-content {
@@ -111,6 +113,13 @@ nav a:hover {
 
 .benefits-img {
   width: 60%;
+  opacity: 1;
+  transition: 400ms;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.54);
+}
+
+.benefits-img:hover {
+  opacity: 0.8;
 }
 
 .utensils {
