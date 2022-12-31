@@ -1,5 +1,5 @@
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 header {
@@ -15,8 +15,6 @@ header {
 }
 
 main {
-  width: 1024px;
-  margin: 0 auto;
 }
 
 nav {
@@ -47,6 +45,13 @@ nav a:hover {
   width: 100%;
 }
 
+.main-section {
+  width: 1024px;
+  margin: 0 auto;
+  padding: 3em 0;
+  background-color: #fefefefe;
+}
+
 .main-title {
   text-align: center;
   font-size: 2em;
@@ -66,6 +71,44 @@ nav a:hover {
   font-style: italic;
 }
 
+.map {
+  padding: 3em 0;
+  background: linear-gradient(#FEFEFE, #888888);
+}
+
+.map-content {
+  width: 940px;
+  margin: 0 auto;
+}
+
+.benefits {
+  padding: 3em 0;
+  background: #888888;
+}
+
+.benefits-contents {
+  width: 640px;
+  margin: 0 auto;
+}
+
+.benefits-list {
+  width: 40%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.items {
+  line-height: 1.5em;
+}
+
+.items::before {
+  content: "★ ";
+}
+
+.items:first-child {
+  font-weight: bold;
+}
+
 .benefits-img {
   width: 60%;
 }
@@ -76,20 +119,17 @@ nav a:hover {
   margin: 0 20px 20px 0;
 }
 
-.map {
-  padding: 3em 0;
-}
-
 .map p {
   margin: 0 0 2em;
   text-align: center;
 }
 
 .video {
+  width: 1024px;
+  margin: 0 auto;
   width: 500px;
-  margin: 1em auto;
+  margin: 2em auto;
 }
-
 
 footer {
   text-align: center;
