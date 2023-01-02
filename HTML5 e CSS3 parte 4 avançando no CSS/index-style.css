@@ -151,3 +151,26 @@ footer {
   font-size: 13px;
   margin: 20px 0;
 }
+
+@media screen and (max-width: 480px) {
+  .box,
+  .main-section,
+  .benefits-contents,
+  .map-content,
+  .video {
+    width: auto;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  nav {
+    position: static;
+  }
+
+  .benefits-list, .benefits-img {
+    margin: 0 0 2em 0;
+    width: 100%;
+  }
+}
